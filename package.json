@@ -1,5 +1,5 @@
 {
-  "name": "vue-prism-component",
+  "name": "@cycraft/vue-prism-component",
   "version": "1.1.1",
   "description": "vue component for prism.js",
   "repository": {
@@ -7,7 +7,7 @@
     "type": "git"
   },
   "homepage": "https://egoistian.com/vue-prism-component/",
-  "main": "dist/vue-prism-component.common.js",
+  "main": "dist/vue-prism-component.esm.js",
   "cdn": "dist/vue-prism-component.min.js",
   "unpkg": "dist/vue-prism-component.min.js",
   "files": [
@@ -17,9 +17,9 @@
     "test": "echo skip",
     "lint": "xo",
     "prepublishOnly": "npm run build",
-    "build": "npm run build:umd && npm run build:cjs",
+    "build": "npm run build:umd && npm run build:esm",
     "build:umd": "bili --file-name \"vue-prism-component[min].js\" --format umd --format umd-min --env.NODE_ENV production --module-name PrismComponent --external prismjs --external vue",
-    "build:cjs": "bili --file-name \"vue-prism-component.common.js\" --format cjs"
+    "build:esm": "bili --file-name \"vue-prism-component.esm.js\" --format esm"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
