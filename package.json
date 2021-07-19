@@ -1,6 +1,6 @@
 {
   "name": "@cycraft/vue-prism-component",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "vue component for prism.js",
   "repository": {
     "url": "egoist/vue-prism-component",
@@ -23,11 +23,10 @@
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "prismjs": "^1.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "bili": "^4.9.0",
+    "prismjs": "^1.6.0",
     "eslint-config-rem": "^3.0.0",
     "vue": "^3.0.4",
     "xo": "^0.18.0"
