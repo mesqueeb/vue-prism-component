@@ -1,6 +1,6 @@
 {
   "name": "@cycraft/vue-prism-component",
-  "version": "1.1.1",
+  "version": "2.0.1",
   "description": "vue component for prism.js",
   "repository": {
     "url": "egoist/vue-prism-component",
@@ -19,15 +19,16 @@
     "prepublishOnly": "npm run build",
     "build": "npm run build:umd && npm run build:esm",
     "build:umd": "bili --file-name \"vue-prism-component[min].js\" --format umd --format umd-min --env.NODE_ENV production --module-name PrismComponent --external prismjs --external vue",
-    "build:esm": "bili --file-name \"vue-prism-component.esm.js\" --format esm"
+    "build:esm": "bili --file-name \"vue-prism-component.esm.js\" --format esm --bundle-node-modules"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "prismjs": "^1.6.0"
+  },
   "devDependencies": {
     "bili": "^4.9.0",
     "eslint-config-rem": "^3.0.0",
-    "prismjs": "^1.6.0",
     "vue": "^3.0.4",
     "xo": "^0.18.0"
   },
