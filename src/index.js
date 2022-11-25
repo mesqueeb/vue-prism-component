@@ -4,23 +4,22 @@ import Prism from 'prismjs'
 export default defineComponent({
   props: {
     code: {
-      type: String
+      type: String,
     },
     inline: {
       type: Boolean,
-      default: false
+      default: false,
     },
     language: {
       type: String,
-      default: 'markup'
-    }
+      default: 'markup',
+    },
   },
   setup(props, { slots, attrs }) {
     const defaultSlot = (slots && slots.default && slots.default()) || []
     const code =
-      props.code || (defaultSlot && defaultSlot.length)
-        ? defaultSlot[0].children
-        : ''
+      props.code ||
+      (defaultSlot && defaultSlot.length ? defaultSlot[0].children : '')
     const inline = props.inline
     const language = props.language
     const prismLanguage = Prism.languages[language]
@@ -35,7 +34,7 @@ export default defineComponent({
       if (inline) {
         return h('code', {
           class: [className],
-          innerHTML: Prism.highlight(code, prismLanguage)
+          innerHTML: Prism.highlight(code, prismLanguage),
         })
       }
 
@@ -43,16 +42,16 @@ export default defineComponent({
         'pre',
         {
           ...attrs,
-          class: [attrs.class, className]
+          class: [attrs.class, className],
         },
         [
           h('code', {
             ...attrs,
             class: [attrs.class, className],
-            innerHTML: Prism.highlight(code, prismLanguage)
-          })
+            innerHTML: Prism.highlight(code, prismLanguage),
+          }),
         ]
       )
     }
-  }
+  },
 })
